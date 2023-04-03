@@ -2,15 +2,17 @@ const express = require('express')
 const app = express();
 app.listen(3000, () => {
     //Use getResult.toString() to return result without brackets
-    console.log(getResult());
+    console.log(JSON.parse({
+        firstAnswer: getFirstAnswerResult(),
+        secondAnswer: "",
+        thirdAnswer: "",
+        fourthAnswer: "",
+    }));
 });
-app.get('/getresult', function (req, res) {
-  res.send(getResult());
-})
 const getNumbers = () => {
     return ([...Array(100).keys()].map(x => ++x));
 }
-const getResult = () => {
+const getFirstAnswerResult = () => {
     return getNumbers().map(n => {
         return multipleCheck(n);
     });
@@ -28,4 +30,8 @@ const multipleCheck = (n) => {
     }else{
         return n;
     }
+}
+
+const workingArray = (n, k) => {
+
 }
