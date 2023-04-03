@@ -2,6 +2,8 @@
 
 Questa è la mia soluzione all'evaluation test.
 
+Assicurarsi di avere installato node.js e npm.
+
 Per ricevere le risposte al test clonare il repository e nel terminale eseguire i seguenti comandi (all'interno della cartella del repo) :
 
 - npm install
