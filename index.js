@@ -5,7 +5,7 @@ app.listen(3000, () => {
         firstAnswer: getFirstAnswerResult(),
         secondAnswer: arrayAlgorithm(10, 9),
         thirdAnswer: "Inizio dal task con il quale mi sento più confidente per chiuderlo nel minor tempo possibile, in questo modo avrò maggior tempo per svolgere il task dove mi sento meno sicuro",
-        fourthAnswer: "",
+        fourthAnswer: "La scelta dello stack tecnologico in relazione al fatto di dover minimizzare i tempi di sviluppo e i costi è fondamentale, per cui io opterei per uno stack con il quale i membri del team si sentono piu confidenti, in questo caso se il team è composto solo da me utilizzerei angular per il frontend e nestjs per il backend visto che sono i framework che conosco meglio, come database sceglerei postgres per lo stesso motivo. Nel caso si dovesse avere piu tempo a disposizione, dedicherei del tempo per la ricerca, magari si scopre una tecnologia che fitta meglio le proprie esigenze.",
     });
 });
 const getFirstAnswerResult = () => {
@@ -39,8 +39,8 @@ const arrayAlgorithm = (n, k) => {
     });
     const result = secondArray.map(el => {
        return {
-        key: el,
-        value: firstArray.filter(sel => sel < el).length
+            key: el,
+            value: firstArray.filter(sel => sel < el).length
         };
     });
     return {
